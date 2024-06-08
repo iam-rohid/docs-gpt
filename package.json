@@ -2,14 +2,16 @@
   "name": "docs-gpt",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "generate": "turbo run generate",
+    "migrate": "turbo run migrate --summarize",
+    "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@acme/eslint-config": "workspace:*",
+    "@acme/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
